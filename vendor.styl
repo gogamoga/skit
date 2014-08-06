@@ -1,0 +1,16 @@
+vendor_prop(prop, args...)
+  +cache(prop, args)
+    {prop} args
+    -webkit-{prop} args
+    -moz-{prop} args
+    -o-{prop} args
+
+vendor_args(prop, args...)
+  +cache(prop, args)
+    {prop} args
+    {prop} s('-moz-%s', args)
+    {prop} s('-webkit-%s', args)
+    {prop} s('-o-%s', args)
+
+vendor(prop, args...)
+  vendor_prop(prop, args)
