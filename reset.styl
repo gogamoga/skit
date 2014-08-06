@@ -1,0 +1,19 @@
+@require '_reset'
+@require 'set'
+
+reset()
+  if arguments and arguments is defined
+    for n in arguments
+      {n}
+        reset()
+  else
+    if mixin == 'root'
+      _reset()
+    else
+      +cache()
+        set-to auto display width height background border color
+        set-to 0 padding margin
+        set-to-vendor border-box box-sizing
+        font-family sans-serif
+        font-size 100%
+        line-height normal
