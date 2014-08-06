@@ -1,0 +1,14 @@
+clearfix()
+  if arguments
+    for n in arguments
+      {n}:before
+      {n}:after
+        clearfix()
+  else
+    +cache()
+      content "."
+      display block
+      clear both
+      visibility hidden
+      line-height 0
+      height 0
