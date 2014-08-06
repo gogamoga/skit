@@ -1,0 +1,20 @@
+@requre 'lookup'
+@require 'vendor'
+
+rule(n, r)
+  +cache(n, r)
+    v = $lookup(n, r)
+    if v
+      {r} v
+
+vrule(n, r)
+  +cache(n, r)
+    v = $lookup(n, r)
+    if v
+      vendor_prop(r, v)
+
+rulev(n, r)
+  +cache(n, r)
+    v = $lookup(n, r)
+    if v
+      vendor_args(r, v)
