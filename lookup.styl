@@ -1,0 +1,8 @@
+unless $default-prefix is set
+  $default-prefix = $
+
+$lookup(n, r)
+  if lookup('' + n + '-' + r)
+    lookup('' + n + '-' + r)
+  else if lookup('' + $default-prefix + n + '-' + r)
+    lookup('' + $default-prefix + n + '-' + r)
