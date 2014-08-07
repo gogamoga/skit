@@ -1,14 +1,20 @@
+width(v)
+  +cache('v' + v)
+    if typeof(v) == 'unit' and unit(v) == ''
+      width: 100% * v
+    else if v and v is defined
+      width: v
+
+height(v)
+  +cache('v' + v)
+    if typeof(v) == 'unit' and unit(v) == ''
+      height: 100% * v
+    else if v and v is defined
+      height: v
+
 size(w, h)
-  +cache('w' + w)
-    if typeof(w) == 'unit' and unit(w) == ''
-      width 100% * w
-    else if w and w is defined
-      width w
-  +cache('h' + h)
-    if typeof(h) == 'unit' and unit(h) == ''
-      height 100% * h
-    else if h and h is defined
-      height h
+  width w
+  height h
 
 align(a)
   +cache('a' + a)
