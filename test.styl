@@ -1,0 +1,71 @@
+@require 'index'
+
+// Test util
+
+  // Test util/lookup
+    $test-property = test-value
+    .util-lookup-test
+      test-result $lookup(test, property)
+
+  // Test util/vendor
+    .util-vendor-test
+      vendor vendor-prop test-value
+
+    .util-vendor-prop-test
+      vendor-prop vendor-prop test-value
+
+    .util-vendor-args-test
+      vendor-args test-prop vendor-arg
+
+  // Test util/set
+    .util-set-to-test
+      set-to test-value test-param-1 test-param-2 test-param-3
+
+    .util-set-to-vendor-test
+      set-to-vendor test-value test-param-1 test-param2 test-param-3
+
+  // Test util/rule
+    .util-rule-test
+      rule test property
+
+    .util-rulev-test
+      rulev test property
+
+    .util-vrule-test
+      vrule test property
+
+  // Test util/reset
+    .util-reset-test
+      reset()
+
+    reset()
+
+  // Test util/clearfix
+    .util-clearfix-test
+      clearfix()
+
+// Test box
+  .size-test
+    size (1/2) auto
+
+  .align-test-top
+    align top
+
+  .align-test-bottom
+    align bottom
+
+  .align-test-middle
+    align middle
+
+  .align-test-left
+    align left
+
+  .align-test-right
+    align right
+
+  .align-test-center
+    align center
+
+// Test grid
+  .grid-test
+    grid()
