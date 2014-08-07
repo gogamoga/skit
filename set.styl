@@ -16,8 +16,6 @@ set-to-vendor()
       v = n
     else
       if typeof v == string
-        for n in p
-          vendor(n, s('%s', v))
+        vendor(n, s('%s', v))
       else
-        for n in p
-          vendor(n, v)
+        vendor(n, v)
