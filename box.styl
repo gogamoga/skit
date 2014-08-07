@@ -1,0 +1,18 @@
+size(w, h)
+  +cache('w' + w)
+    if typeof(w) == 'unit' and unit(w) == ''
+      width 100% * w
+    else if w and w is defined
+      width w
+  +cache('h' + h)
+    if typeof(h) == 'unit' and unit(h) == ''
+      height 100% * h
+    else if h and h is defined
+      height h
+
+align(a)
+  +cache('a' + a)
+    if a == top or a == bottom or a == middle or a == baseline
+      vertical-align a
+    if a == left or a == right or a == center
+      text-align a
