@@ -1,16 +1,16 @@
-vendor_prop(p, a...)
-  +cache(''+p, ''+a)
+vendor-prop(p, a...)
+  +cache('p' + p, 'a' + a)
     {p} a
     -webkit-{p} a
     -moz-{p} a
     -o-{p} a
 
-vendor_args(p, a...)
-  +cache(''+p, ''+a)
+vendor-args(p, a...)
+  +cache('p' + p, 'a' + a)
     {p} a
     {p} s('-moz-%s', a)
     {p} s('-webkit-%s', a)
     {p} s('-o-%s', a)
 
 vendor(p, a...)
-  vendor_prop(p, a)
+  vendor-prop(p, a)
